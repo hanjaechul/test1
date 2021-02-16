@@ -1,18 +1,32 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <h1>안녕하세요 helloworld</h1>
+    <test1></test1>
+    <form action="">
+      <label for="">Name</label>
+      <input type="text" v-model="name">
+      <br><button>Submit</button>
+    </form>
+
   </div>
 </template>
-
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import test1 from '@/components/test.vue';
 
 export default {
-  name: 'Home',
   components: {
-    HelloWorld
+    test1
+  },
+
+  data() {
+    return{
+      name: '작성자 : 한재철'
+    }
   }
 }
 </script>
+<style scoped>
+ h1 {
+   color:red;
+ }
+</style>
